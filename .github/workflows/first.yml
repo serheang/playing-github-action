@@ -19,8 +19,9 @@ jobs:
       # checkout
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Upload
-        uses:  actions/upload-artifact@v2
-        with:
-          name: ${{ env.FILENAME }}        
-          path: .  
+      # setup python
+      - name: Setup python
+        uses: actions/setup-python@v2
+      # Test  
+      - name: Test script
+        run: python hello.py
