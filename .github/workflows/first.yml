@@ -18,9 +18,9 @@ jobs:
     steps:
       # checkout
       - name: Checkout
-        run: actions/checkout@v2
+        uses: actions/checkout@v2
       - name: Upload
-        run:  actions/upload-artifact@v2
+        uses:  actions/upload-artifact@v2
         with:
           name: ${{ env.FILENAME }}        
           path: .  
